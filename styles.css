@@ -5,12 +5,13 @@
   outline: 0;
   text-decoration: none;
   color: white;
+  box-sizing: border-box;
 }
 
 body {
   background-color: rgb(6, 7, 12);
-  font-family: inter;
-  background-image: url(background-img.png);
+  font-family: 'Inter', sans-serif;   /* fixed */
+  background-image: url("portfolio.jpeg");  /* replaced image */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -58,6 +59,7 @@ nav .active {
   display: grid;
   grid-template-columns: 1fr 1fr;
 }
+
 /* Left */
 .hero-left {
   display: flex;
@@ -66,7 +68,7 @@ nav .active {
   z-index: 1;
 }
 
-h1{
+h1 {
   font-size: 4rem;
   font-weight: 800;
   padding: 25px 0;
@@ -86,38 +88,35 @@ p {
   padding-bottom: 50px;
 }
 
-/* button */
+/* Buttons */
 .cta button {
   color: black;
   font-size: 1.2rem;
   font-weight: 600;
   padding: 15px 0;
   width: 200px;
-  border:none;
   border-radius: 8px;
   margin-right: 50px;
   background-color: #3FA2F6;
   margin-bottom: 180px;
-  transition: background-color 0.12s, border 0.12s, color 0.21s, padding 0.12s;
+  transition: all 0.3s ease;
 }
 
 .cta .cta-1:hover {
   background-color: transparent;
   color: #3FA2F6;
   border: 2px solid #3FA2F6;
-  padding: 13px 0;
-}
-
-.cta .cta-2:hover {
-  background-color: #3fa1f6;
-  color: #000000;
 }
 
 .cta .cta-2 {
   background-color: transparent;
   color: #3FA2F6;
   border: 2px solid #3FA2F6;
-  padding: 13px 0;
+}
+
+.cta .cta-2:hover {
+  background-color: #3FA2F6;
+  color: #000000;
 }
 
 /* Icons */
@@ -125,31 +124,27 @@ p {
   display: flex;
   align-items: center;
   gap: 25px;
-}
-
-.social-icon{
   padding-bottom: 50px;
 }
 
 .social-icon i {
-font-size: 1.2rem;
-color: #3FA2F6;
-border: 1px solid #3FA2F6;
-border-radius: 50px;
-padding: 8px;
-height: 25px;
-width: 25px;
-display: flex;
-align-items: center;
-justify-content: center;
-transition: transform 0.12s, box-shadow 0.12s;
-cursor: pointer;
-
+  font-size: 1.2rem;
+  color: #3FA2F6;
+  border: 1px solid #3FA2F6;
+  border-radius: 50px;
+  padding: 8px;
+  height: 25px;
+  width: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
 
 .social-icon i:hover {
   transform: scale(1.1);
-  text-shadow: 0 0 10px #3FA2F6;
+  box-shadow: 0 0 10px #3FA2F6;
 }
 
 /* Right section */
@@ -158,6 +153,7 @@ cursor: pointer;
   transition: background-color 3s, box-shadow 3s;
   cursor: pointer;
 }
+
 .hero-right:hover {
   background-color: rgba(6, 7, 12, 0.705);
   box-shadow: 
@@ -169,38 +165,35 @@ cursor: pointer;
 
 /* Animations */
 @keyframes fadeIn {
-  from{
+  from {
     transform: translateY(40px);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes fadeInTop {
-  from{
+  from {
     transform: translateY(-100%);
     opacity: 0;
   }
-  to{
+  to {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
 @keyframes backgroundZoom {
-  from{
+  from {
     background-size: 80%;
   }
-  to{
+  to {
     background-size: 100%;
   }
 }
-
-
-
 
 /* Apply Animations */
 h1 {
@@ -220,6 +213,7 @@ p {
   opacity: 0;
   animation-delay: 0.6s;
 }
+
 button {
   animation: fadeIn 1.8s ease-out forwards;
   opacity: 0;
